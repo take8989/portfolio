@@ -1,0 +1,259 @@
+html, body, div, span, applet, object, iframe,
+h1, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+   background-color: #f5f5dd;
+    line-height: 1;
+   height: 100vh;
+   font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+header {
+   width: 100%;
+   height: 100px;
+   background-color: #e9462d;
+   color: #ffffff;
+   top: 0;
+   z-index: 20;
+   display: flex;
+}
+
+h1 {
+   font-size: 42px;
+   margin-left: 20px;
+   line-height: 90px;
+}
+
+.logo {
+height:80px;
+width:250px;
+}
+
+#main {
+   display: flex;
+   width: 1250px;
+   margin: 0 auto;
+}
+
+h2{
+   text-align:center
+}
+
+#tables, #option {
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+#tables {
+   flex: 4;
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+}
+
+#option {
+   flex:1;
+   margin: 40px;
+   border-bottom: solid 1px gray;
+}
+
+#member p {
+   margin-bottom: 5px;
+}
+
+table {
+   border-collapse: collapse;
+   margin: 0 auto;
+   margin-top:30px;
+}
+
+#table1, #table2, #table3, #table4 {
+   width: 400px;
+   height: 180px;
+}
+
+#table1, #table2, #table3, #table4, #option {
+   background-color: #ffffff;
+} 
+
+table, tr, td {
+   border: solid 1px gray;
+   padding: 10px;
+   text-align: center;
+   font-size: 16px ;
+   margin: 20px;
+}
+
+
+caption {
+   border: solid 1px gray;
+   border-bottom: none;
+   text-align: center;
+   background-color: #e9462d;
+   color: #ffffff;
+   font-size: 24px;
+   padding: 10px;
+}
+
+td {
+   vertical-align: middle;
+   padding-bottom: 0px;
+   height: 150px;
+}
+
+#role p {
+   margin-bottom: 10px;
+  }
+
+.left {
+   float: left;
+   width: 50%;
+}
+
+#option h2 {
+   background-color: #e9462d;
+   color: #ffffff;
+   border-bottom: solid 1px gray;
+   margin-top: 0;
+   margin-bottom: 0;
+   font-size: 24px;
+   padding: 10px;
+}
+
+#option_menu {
+   padding: 20px;
+   width: 220px;
+}
+
+#option h3 {
+   font-size: 20px;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+#select_box {
+   text-align: center;
+}
+
+#team {
+   margin: 0 auto;
+   margin-bottom: 20px;
+   width: 100px;
+   height: 30px;
+}
+
+#checkboxs {
+   margin-left: 40px;
+   margin-bottom: 20px;
+}
+
+#checkboxs label {
+   width: 42%;
+   display: inline-block;
+}
+
+.check {
+   margin-left: 12px;
+   margin-bottom: 10px;
+}
+
+input[type="checkbox" i] {
+	transform:		scale(1.4);
+   position:relative;
+   top: 1px;
+   right :5px;
+}
+
+#btn {
+   margin: 0 auto;
+}
+
+#allocation {
+   display: inline-block;
+   width: 220px;
+   height: 40px;
+}
+
+footer {
+   width: 100%;
+   height: 60px;
+   background-color: #e9462d;
+   color: #ffffff;
+   z-index: 20;
+   position: absolute;/*←絶対位置*/
+   bottom: 0; /*下に固定*/
+}
+
+#all_member {
+   line-height: 60px;
+   display: flex;
+}
+
+#all_member h2{
+   float: left;
+   margin: 0 20px;
+   line-height: 60px;
+}
+
+#teamA {
+   flex: 1;
+   margin-left: 20px;
+}
+
+#teamB {
+   flex: 1;
+}
+
+#teamA h3 {
+   float: left;
+   font-size: 20px;
+}
+
+#teamB h3 {
+   float: left;
+   font-size: 20px; 
+   margin-left: 20px;
+}
+
+#teamA p {
+   margin-left: 20px;
+}
+
+#teamB p {
+   margin-left: 20px;
+}

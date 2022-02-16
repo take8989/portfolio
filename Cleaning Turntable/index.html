@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+   <meta charset="UTF-8">
+   <title>掃除当番表</title>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="stylesheet.css">
+   <script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="common.js"></script>
+   
+</head>
+<body>
+   <header><h1>掃除当番表</h1></header>
+   <div id='main'>
+      <div id='tables'>
+
+         <table id='table1'>
+            <caption>PC</caption>
+            <tr id='role'>
+               <td id='role1'></td>
+            </tr>
+         </table>
+         
+         <table id='table2'>
+            <caption>机拭き</caption>
+            <tr id='role'>
+               <td id='role2'></td>
+            </tr>
+         </table>
+         
+         <table id='table3'>
+            <caption>コロコロ</caption>
+            <tr id='role'>
+               <td id='role3'>
+                  <p></p>
+               </td>
+            </tr>
+         </table>
+
+         <table id='table4'>
+            <caption>ホワイトボード</caption>
+            <tr id='role'>
+               <td id='role4'>
+                  <p></p>
+               </td>
+            </tr>
+         </table>
+
+      </div>
+
+      <div id='option'>
+         <h2>設定</h2>
+         <div id="option_menu">
+            <h3>本日の当番</h3>
+            <div id="select_box">
+               <select id="team" name="team">
+                  <option value="A" selected>Aチーム</option>
+                  <option value="B">Bチーム</option>
+               </select>
+            </div>
+            
+            <div id="absentee">
+               <h3>欠席者</h3>
+               <div id="checkboxs">
+               
+               </div>
+
+               <div id="btn">
+                  <button id="allocation">割り当て</button>
+               </div>
+
+         </div> 
+         </div>
+      </div>
+   </div>
+   
+   
+<!--<div id="test1"></div>
+   <div id="test2"></div>
+   <div id="test3"></div> -->
+
+   
+   
+　　
+   <footer>
+      <div id='all_member'>
+         <h2>メンバー</h2>
+         <div id="teamA">
+            <h3>Aチーム&nbsp;：&nbsp;</h3>
+            <p id="memberA"></p>
+         </div>
+         <div id="teamB">
+            <h3>Bチーム&nbsp;：&nbsp;</h3>
+            <p id="memberB"></p>
+         </div>
+      </div>
+   </footer>
+</body>
+</html>
