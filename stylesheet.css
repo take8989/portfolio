@@ -6,6 +6,7 @@ body {
     display: none;
 }
 
+/*ヘッダー*/
 header {
     width: 100%;
     background-color: #000000;
@@ -23,6 +24,7 @@ header h1 {
     
 }
 
+/*トップに戻るボタン*/
 #topbtn {
     font-size: 30px;
     text-align: center;
@@ -40,6 +42,7 @@ header h1 {
     border-radius: 50%;
 }
 
+/*メインイメージ*/
 .main-image {
     background-image: url(image/main.jpg);
     background-size: cover;
@@ -47,6 +50,7 @@ header h1 {
     width: 100%
 }
 
+/*自己紹介*/
 .main-contents {
     max-width: 1000px;
     margin: 60px auto;
@@ -89,6 +93,7 @@ header h1 {
     padding: 20px 0px;
 }
 
+/*スキル*/
 #skills {
     background: #f7f7f7;
     color: #607D8B;
@@ -99,23 +104,28 @@ header h1 {
     margin: 0;
     text-align: center;
 }
+
 #skills h2 span {
     display: block;
 }
+
 #skills img {
     display: block;
     margin: 40px auto 0;
 }
+
 #skills dl {
     text-align: center;
     margin: 40px auto 10px;
     width: 500px;
 }
+
 #skills dt {
     font-weight: bold;
     margin-bottom: 10px;
     display: inline-block;
 }
+
 #skills dd {
     margin: 0;
     margin-bottom: 20px;
@@ -124,23 +134,28 @@ header h1 {
     padding-bottom: 10px;
 }
 
+/*制作実績*/
 #works {
     padding: 100px 0;
     color: #666;
 }
+
 #works h2 {
     margin: 0;
     text-align: center;
 }
+
 #works h2 span {
     display: block;
 }
+
 #works > ul {
     max-width: 1000px;
     margin: 30px auto 0;    
     padding: 0;
     padding: 20px;
 }
+
 #works > ul > li {
     display: flex;
     padding: 40px 0;
@@ -152,28 +167,34 @@ header h1 {
     padding-bottom: 10px;
     margin-top: 10px;
 }
+
 #works .w-left {
     width: 90%;
 }
+
 #works .w-right {
     width: 110%;
 }
+
 #works .w-left img {
     width: 100%;
     border: 1px solid #666;
 }
+
 #works .w-left img:hover {
     opacity: 0.5;
 }
+
 #works .w-right li {
     margin-bottom: 20px;
 }
+
 #works .w-right a {
     color: #6fd0cb;
     margin-left: 40px;
 }
 
-
+/*フッター*/
 footer {
     background-color: #71d0cd;
 }
@@ -185,6 +206,7 @@ footer {
 }
 
 @media screen and (max-width: 896px) {
+
     h1 {
         font-size: 24px;
     }
@@ -193,9 +215,11 @@ footer {
         margin-top: 40px;
         display: inherit;
     }
+
     h2 {
         text-align: center;
     }
+
     .main-contents img {
         width: 250px;
         height: 250px;
@@ -211,32 +235,40 @@ footer {
         width: 70%;
         margin: auto;
     }
+
     #skills img {
         width: 70%;
     }
+
     #skills dl {
         width: 70%;
     }
+
     #works > ul > li {
         display: inherit;
         margin-bottom: 70px;
     }
+
     #works .w-left {
         width: 100%;
         text-align: center;
     }
+
     #works .w-left img {
         width: 60%;
         margin-bottom: 20px;
     }
+
     #works h3 {
         text-align: center;
         margin-left: 0;
     }
+
     #works .w-right {
         width: 70%;
         margin: auto;
     }
+
     #works .w-right a {
         text-align: center;
         background: #6fd0cb;
@@ -248,12 +280,15 @@ footer {
         padding: 10px;
         border-radius: 10px;
     }
+
 }
 
 @media screen and (max-width: 480px) {
+
     .sp {
         display: block;
     }
+
     header {
         position: absolute;
         opacity: 1;
@@ -267,13 +302,16 @@ footer {
         text-align: center;
 
     }
+
     #skills dt {
         float: inherit;
     }
+
     #skills dd {
         text-align: center;
         border-bottom: none;
     }
+
     #skills dd:after {
         content: "";
         display: block;
@@ -285,6 +323,7 @@ footer {
         z-index: 99;
         transform: translateX(-50%);
     }
+
     #skills dd:last-child:after {
         content: none;
     }
@@ -294,13 +333,16 @@ footer {
     #works .w-right {
         width: 100%;
     }
+
     #skills,
     #works {
         padding-top: 60px;
     }
+
     #works > ul > li {
         padding-top: 0;
     }
+
     #works .w-right ul {
         padding-left: 19px
     }
