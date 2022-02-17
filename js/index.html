@@ -1,113 +1,115 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
    <meta charset="UTF-8">
    <title>ルーレット</title>
-   <script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script>
-   var nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
-   var randnum = 0;
-   var rand = 1;
-   var interval_id;
-   var start_flag = false;// スタート処理中はtrue
-   
-   function start_roulette() {
-      $('#num' + randnum).css('background-color','pink');
-      randnum = 0;
-     // 停止しているときのみ、スタート処理を開始(二重クリック防止)
-     if (start_flag === false) {
-       // 1秒ごとにflash_textを実行
-       interval_id = setInterval(roulette, 100);
-       start_flag = true;
-     }
-     $('#start').prop('disabled',true);
-     $('#stop').prop('disabled',false);
-   }
-   
-   function roulette() {
-      $('#num' + randnum).css('background-color','white');
-      rand = Math.floor(Math.random()*nums.length);
-      randnum = nums[rand];
-      $('#num' + randnum).css('background-color','red');
-   }
-     
-   
-   function stop_roulette() {
-     // setIntervalによる繰り返し動作を停止
-     clearInterval(interval_id);
-     start_flag = false;
-     $('#start').prop('disabled',false);
-     nums.splice(rand,1);
-     $('#stop').prop('disabled',true);
-     if(nums.length === 0){
-     $('#start').prop('disabled',true);
-     }
-   }
-   
-   function reset_roulette() {
-     clearInterval(interval_id);
-     start_flag = false;
-     nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
-     for (var i = 0; i < nums.length; i++) {
-         $('#num' + (i + 1) ).css('background-color','white');
-     }
-     $('#start').prop('disabled',false);
-   }
-   
-   $(function() {
-     $('#start').click(start_roulette);
-     $('#stop').click(stop_roulette);
-     $('#reset').click(reset_roulette);
-   });
+      var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+      var randnum = 0;
+      var rand = 1;
+      var interval_id;
+      var start_flag = false;// スタート処理中はtrue
+
+      function start_roulette() {
+         $('#num' + randnum).css('background-color', 'pink');
+         randnum = 0;
+         // 停止しているときのみ、スタート処理を開始(二重クリック防止)
+         if (start_flag === false) {
+            // 1秒ごとにflash_textを実行
+            interval_id = setInterval(roulette, 100);
+            start_flag = true;
+         }
+         $('#start').prop('disabled', true);
+         $('#stop').prop('disabled', false);
+      }
+
+      function roulette() {
+         $('#num' + randnum).css('background-color', 'white');
+         rand = Math.floor(Math.random() * nums.length);
+         randnum = nums[rand];
+         $('#num' + randnum).css('background-color', 'red');
+      }
+
+
+      function stop_roulette() {
+         // setIntervalによる繰り返し動作を停止
+         clearInterval(interval_id);
+         start_flag = false;
+         $('#start').prop('disabled', false);
+         nums.splice(rand, 1);
+         $('#stop').prop('disabled', true);
+         if (nums.length === 0) {
+            $('#start').prop('disabled', true);
+         }
+      }
+
+      function reset_roulette() {
+         clearInterval(interval_id);
+         start_flag = false;
+         nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+         for (var i = 0; i < nums.length; i++) {
+            $('#num' + (i + 1)).css('background-color', 'white');
+         }
+         $('#start').prop('disabled', false);
+      }
+
+      $(function () {
+         $('#start').click(start_roulette);
+         $('#stop').click(stop_roulette);
+         $('#reset').click(reset_roulette);
+      });
    </script>
 </head>
+
 <body>
    <div id="roulette">
-       <table id="numbers">
-           <tr>
-               <td id="num1">1</td>
-               <td id="num2">2</td>
-               <td id="num3">3</td>
-               <td id="num4">4</td>
-           </tr>
-           <tr>
-               <td id="num5">5</td>
-               <td id="num6">6</td>
-               <td id="num7">7</td>
-               <td id="num8">8</td>
-           </tr>
-           <tr>
-               <td id="num9">9</td>
-               <td id="num10">10</td>
-               <td id="num11">11</td>
-               <td id="num12">12</td>
-           </tr>
-           <tr>
-               <td id="num13">13</td>
-               <td id="num14">14</td>
-               <td id="num15">15</td>
-               <td id="num16">16</td>
-           </tr>
-       </table>
+      <table id="numbers">
+         <tr>
+            <td id="num1">1</td>
+            <td id="num2">2</td>
+            <td id="num3">3</td>
+            <td id="num4">4</td>
+         </tr>
+         <tr>
+            <td id="num5">5</td>
+            <td id="num6">6</td>
+            <td id="num7">7</td>
+            <td id="num8">8</td>
+         </tr>
+         <tr>
+            <td id="num9">9</td>
+            <td id="num10">10</td>
+            <td id="num11">11</td>
+            <td id="num12">12</td>
+         </tr>
+         <tr>
+            <td id="num13">13</td>
+            <td id="num14">14</td>
+            <td id="num15">15</td>
+            <td id="num16">16</td>
+         </tr>
+      </table>
       <div id="btn">
          <button id="start">スタート</button>
          <button id="stop">ストップ</button>
          <button id="reset">リセット</button>
       </div>
    </div>
-   
+
    <style type="text/css">
-   body {
+      body {
          width: 80%;
          margin: auto;
-   }
-   
+      }
+
       #roulette {
          padding: 20px 60px;
          width: 400px;
          height: 500px;
-        }
-      
+      }
+
       table {
          width: 400px;
          background-color: #ffffff;
@@ -118,26 +120,27 @@
          border: 3px solid black;
          border-collapse: collapse
       }
-      
+
       td {
-            border: 1px solid black;
-            padding: 5px;
-        }
-      
+         border: 1px solid black;
+         padding: 5px;
+      }
+
       #btn {
          margin-top: 20px;
          display: flex;
       }
-      
+
       button {
          font-size: 20px;
          width: 33.3%;
       }
-      
-      #start,#stop {
-         margin-right:10px;
+
+      #start,
+      #stop {
+         margin-right: 10px;
       }
-      
    </style>
 </body>
+
 </html>

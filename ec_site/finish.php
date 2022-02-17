@@ -16,9 +16,9 @@ $user_data = [];
 $cart_data = [];
 
 if (isset($_COOKIE['user_name']) === false) {
-   header("location: login.php");
+    header("location: login.php");
 } else {
-   $user_name = $_COOKIE['user_name'];
+    $user_name = $_COOKIE['user_name'];
 }
 
 //カートのデータの表示
@@ -27,12 +27,12 @@ $link = get_db_connect();
 //ユーザーIDを取得
 $user_data = get_user_id2($link, $user_name);
 foreach ($user_data as $value) {
-       $user_id = $value['id'];
-   }
+    $user_id = $value['id'];
+}
 // カート内の量、商品ID、イメージ画像、商品名、値段を取得
 $cart_data = get_cart_data($link, $user_id);
 
-if($cart_data === []) {
+if ($cart_data === []) {
     $err_msg[] = '商品がありません';
 }
 

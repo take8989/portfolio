@@ -28,7 +28,7 @@ if ($request_method === 'POST') {
    $link = get_db_connect();
    $user_data = get_user_id2($link, $user_name);
    foreach ($user_data as $value) {
-       $user_id = $value['id'];
+      $user_id = $value['id'];
    }
    $goods_id = get_post_data('item_id');
    if (insert_cart($link, $user_id, $goods_id) === TRUE) {
@@ -36,7 +36,7 @@ if ($request_method === 'POST') {
    } else {
       $err_msg[] = '追加失敗';
    }
-} 
+}
 
 //商品のデータの表示
 // DB接続
