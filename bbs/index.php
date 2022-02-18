@@ -8,7 +8,7 @@ $error_comment = '';
 $log = date('-Y-m-d H:i:s');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
+    //ユーザー名とコメントが未入力、もしくは制限字数以上の場合、エラーメッセージがでるようにする
     if (isset($_POST['user_name']) === TRUE && isset($_POST['user_comment']) === TRUE) {
 
         $user_name = $_POST['user_name'];
