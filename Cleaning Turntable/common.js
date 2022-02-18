@@ -21,6 +21,7 @@ function set_member() {
    }
 };
 
+//ファイルを開いた時の欠席者チェック覧
 $(function first_checkbox() {
    set_member();
    for (var i = 0; i < member.length; i++) {
@@ -28,6 +29,7 @@ $(function first_checkbox() {
    }
 });
 
+//全メンバーリスト
 $(function member_table() {
    var strA = "";
    for (var i = 0; i < memberA.length; i++) {
@@ -42,10 +44,9 @@ $(function member_table() {
    }
    strB = strB.slice(0, -1);
    $("#memberB").append(strB);
-
-
 });
 
+//欠席者のチェックボックスの変更
 function change_absentee() {
    $('#checkboxs').html('');
    for (var i = 0; i < member.length; i++) {
@@ -53,6 +54,7 @@ function change_absentee() {
    }
 }
 
+//出席者に応じて各役割に割り当てる人数を変更する
 function set_role() {
    if (member.length <= 4) {
       role = [1, 2, 3, 4];
@@ -71,6 +73,7 @@ function set_role() {
    }
 }
 
+//欠席者を除いたメンバーからそれぞれの役割に無作為に割り当てる
 function allocate() {
    $('#role1').html('');
    $('#role2').html('');
@@ -114,6 +117,7 @@ function allocate() {
    set_member();
 }
 
+//欠席者をメンバーから除外する
 function exclude_absentee() {
    var absentee = $('.check:checked').map(function () {
       return $(this).val();
