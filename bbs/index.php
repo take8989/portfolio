@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $error_comment = 'ひとことは100文字以内で入力してください';
         }
 
+        //エラーメッセージがない場合、名前、コメント、時間がファイルに記入される
         if ($error_name === '' && $error_comment === '') {
             if (($fp = fopen($filename, 'a')) !== FALSE) {
                 if (fwrite($fp, $user_name . ':' . ' ' . $user_comment . ' ' . $log . "\n") === FALSE) {
@@ -43,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $data = [];
 
+//ファイル読み込み
 if (is_readable($filename) === TRUE) {
     if (($fp = fopen($filename, 'r')) !== FALSE) {
         while (($tmp = fgets($fp)) !== FALSE) {
@@ -65,6 +67,7 @@ if (is_readable($filename) === TRUE) {
 
 <body>
     <h1>ひとこと掲示板</h1>
+    <!--エラーメッセージがある場合表示される-->
     <ul>
         <?php if ($error_name !== '') { ?>
             <li><?php print $error_name; ?></li>
@@ -78,6 +81,7 @@ if (is_readable($filename) === TRUE) {
         ひとこと：<input type="text" name="user_comment" size="60">
         <input type="submit" name="submit" value="送信">
     </form>
+    <!--名前、コメント、時間が表示される-->
     <ul>
         <?php foreach (array_reverse($data) as $read) { ?>
             <li><?php print $read; ?></li>
