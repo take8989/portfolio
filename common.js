@@ -3,7 +3,7 @@ $(function () {
   $("#topbtn").hide();
   $(window).scroll(function () {
 
-//トップから801px下にスクロールした時にボタンが現れる
+      //トップから801px下にスクロールした時にボタンが現れる
       if ($(window).scrollTop() > 800) {
           $("#topbtn").fadeIn(1000);
       } else {
@@ -11,7 +11,7 @@ $(function () {
       }
   });
   
-//ボタンを押したときトップに戻る
+  //ボタンを押したときトップに戻る
   $("#topbtn").click(function () {
       $("body,html").animate({scrollTop: 0}, 500);
       return false;

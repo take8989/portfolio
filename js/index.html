@@ -12,6 +12,7 @@
       var interval_id;
       var start_flag = false;// スタート処理中はtrue
 
+      //ルーレットを開始させる
       function start_roulette() {
          $('#num' + randnum).css('background-color', 'pink');
          randnum = 0;
@@ -21,37 +22,49 @@
             interval_id = setInterval(roulette, 100);
             start_flag = true;
          }
+         //ルーレット作動中はスタートボタンを押せないようにし、ストップボタンを押せるようにする
          $('#start').prop('disabled', true);
          $('#stop').prop('disabled', false);
       }
 
+      //ルーレットの動作
       function roulette() {
+         //直前にいたマスを白に戻す
          $('#num' + randnum).css('background-color', 'white');
+         //無作為に番号を選ぶ
          rand = Math.floor(Math.random() * nums.length);
          randnum = nums[rand];
+         //選んだ番号のマスを赤くする
          $('#num' + randnum).css('background-color', 'red');
       }
 
-
+      //ルーレットを止める
       function stop_roulette() {
          // setIntervalによる繰り返し動作を停止
          clearInterval(interval_id);
          start_flag = false;
+         //ルーレットを止めた時スタートボタンを押せるようにする(全てのマスに止まった時は除く)
          $('#start').prop('disabled', false);
+         //止まったマスを次から選ばれないようにする
          nums.splice(rand, 1);
+         //ストップボタンを押せないようにする
          $('#stop').prop('disabled', true);
+         //全てのマスに止まった時スタートボタンを押せないようにする
          if (nums.length === 0) {
             $('#start').prop('disabled', true);
          }
       }
 
+      //ルーレットをリセットする
       function reset_roulette() {
          clearInterval(interval_id);
          start_flag = false;
          nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+         //全てのマスを白くする
          for (var i = 0; i < nums.length; i++) {
             $('#num' + (i + 1)).css('background-color', 'white');
          }
+         //スタートボタンを押せるようにする
          $('#start').prop('disabled', false);
       }
 
