@@ -10,6 +10,7 @@ $password = '';
 $message = [];
 $err_msg = [];
 
+//クッキーにユーザーとしてのログイン情報が保存されていれば購入画面、管理者としてのログイン情報が保存されていれば管理者画面に移る
 if (isset($_COOKIE['user_name']) === TRUE) {
    if ($_COOKIE['user_name'] === 'admin') {
       header("location: admin.php");
@@ -32,10 +33,13 @@ if ($request_method === 'POST') {
       $err_msg[] = 'パスワードを入力してください。';
    }
 
+   //エラーがなければ、ログインし、ログイン情報がクッキーに保存される
    if (count($err_msg) === 0) {
+      //ユーザーとしてのログイン処理
       if (check_login($user_name, $password) === 0) {
          setcookie('user_name', $user_name, $now + 60 * 60 * 24 * 365);
          header("location: admin.php");
+      //管理者としてのログイン処理
       } else if (check_login($user_name, $password) === 1) {
          setcookie('user_name', $user_name, $now + 60 * 60 * 24 * 365);
          header("location: top.php");

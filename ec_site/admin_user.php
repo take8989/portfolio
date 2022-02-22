@@ -6,6 +6,7 @@ require_once 'function/function.php';
 
 $user_data = [];
 
+//クッキーにログイン情報が保存されていなければ、ログイン画面に移る
 if (isset($_COOKIE['user_name']) === false) {
    header("location: login.php");
 }

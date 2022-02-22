@@ -24,6 +24,7 @@ $request_method = get_request_method();
 if ($request_method === 'POST') {
    // DB接続
    $link = get_db_connect();
+   //カート内の商品を削除する
    if (isset($_POST['delete']) === TRUE) {
       $goods_id = get_post_data('item_id');
       if (delete_cart_table($link, $goods_id) === TRUE) {

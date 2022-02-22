@@ -218,6 +218,7 @@ function insert_db($link, $sql)
     }
 }
 
+//画像をアップロードする
 function upload_file($key)
 {
     $upload = UPLOAD_IMAGE . basename($_FILES[$key]['name']);
@@ -242,6 +243,7 @@ function update_goods_stock_table($goods_id, $stock)
     }
 }
 
+//公開非公開のステータス変更
 function change_status($goods_id, $status)
 {
     // DB接続
@@ -268,6 +270,7 @@ function change_status($goods_id, $status)
     }
 }
 
+//カート内の個数、更新日時を更新する
 function update_cart_amount($link, $goods_id, $amount)
 {
     // 現在時刻を取得

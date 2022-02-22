@@ -15,6 +15,7 @@ $err_msg = [];
 $user_data = [];
 $cart_data = [];
 
+//クッキーにログイン情報が保存されていなければ、ログイン画面に移り、保存されていれば、ヘッダーにユーザー名が表示される
 if (isset($_COOKIE['user_name']) === false) {
     header("location: login.php");
 } else {

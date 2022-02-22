@@ -14,6 +14,7 @@ $message = [];
 $err_msg = [];
 $goods_data = [];
 
+//クッキーにログイン情報が保存されていなければ、ログイン画面に移る
 if (isset($_COOKIE['user_name']) === false) {
     header("location: login.php");
 }
@@ -90,6 +91,7 @@ if ($request_method === 'POST') {
         }
     }
 
+    //商品の削除
     if (isset($_POST['delete']) === TRUE) {
         $goods_id = get_post_data('goods_id');
         if (transaction_delete($goods_id) === TRUE) {
