@@ -27,7 +27,7 @@ $drink_image = '';
 if (isset($_FILES['new_img']) === TRUE) {
     $drink_image = $_FILES['new_img']['name'];
 }
-var_dump($drink_image);
+//var_dump($drink_image);
 $quantity = '';
 if (isset($_POST['new_stock']) === TRUE) {
     $quantity = $_POST['new_stock'];
@@ -116,6 +116,7 @@ if (isset($_POST['new_name']) === TRUE) {
     }
 }
 
+//在庫の更新
 if (isset($_POST['update_stock']) === TRUE) {
     if (preg_match('/^[0-9]+$/', $_POST['update_stock']) === 1) {
         mysqli_set_charset($link, 'utf8');
@@ -133,6 +134,7 @@ if (isset($_POST['update_stock']) === TRUE) {
     }
 }
 
+//公開非公開のステータス変更
 if (isset($_POST['change_status']) === TRUE) {
     mysqli_set_charset($link, 'utf8');
     // 現在時刻を取得

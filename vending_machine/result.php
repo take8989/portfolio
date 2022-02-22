@@ -35,7 +35,9 @@ if ($link) {
             $public_status = $value['public_status'];
         }
         if ($money >= $price && $quantity >= 1 && $public_status === '1') {
+            //おつりの計算
             $money = $money - $price;
+            //購入により在庫を一つ減らす
             $quantity = $quantity - 1;
             //drink_inventory_tableに個数と更新日のupdateを行う
             $sql = 'UPDATE drink_inventory_table SET quantity = ' . $quantity . ', update_date = "' . $date . '" WHERE drink_id =' . $drink_id . '';

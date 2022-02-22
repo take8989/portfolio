@@ -72,6 +72,7 @@ if ($link) {
     <h1>自動販売機</h1>
     <form action="result.php" method="post">
         <div>金額<input type="text" name="money" value=""></div>
+        <!--商品一覧-->
         <div id="flex">
             <?php foreach ($drink_data as $value) { ?>
                 <div class="drink">
