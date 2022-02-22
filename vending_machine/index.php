@@ -1,8 +1,8 @@
 <?php
-$host = 'mysql34.conoha.ne.jp'; // データベースのホスト名又はIPアドレス
-$user = 'bcdhm_tennoji0003';  // MySQLのユーザ名
-$passwd   = '*tF2xWBV';    // MySQLのパスワード
-$dbname   = 'bcdhm_tennoji0003';    // データベース名
+$host = '********'; // データベースのホスト名又はIPアドレス
+$user = '********';  // MySQLのユーザ名
+$passwd   = '********';    // MySQLのパスワード
+$dbname   = '********';    // データベース名
 $link = mysqli_connect($host, $user, $passwd, $dbname);
 $drink_data = [];
 $message = [];
