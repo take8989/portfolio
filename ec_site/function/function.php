@@ -1,4 +1,5 @@
 <?php
+//数字文字が入力されているかのチェック
 function check_postdata($data)
 {
     if ($data !== '') {
@@ -8,6 +9,7 @@ function check_postdata($data)
     }
 }
 
+//半角数字チェック
 function check_number($number)
 {
     if (preg_match('/^[0-9]+$/', $number) === 1) {
@@ -17,6 +19,7 @@ function check_number($number)
     }
 }
 
+//ユーザー名が半角英数字かつ6文字以上かチェック
 function check_user($number)
 {
     if (preg_match('/^[0-9a-zA-Z]+$/', $number) === 1 && mb_strlen($number) >= 6) {
@@ -28,6 +31,7 @@ function check_user($number)
     }
 }
 
+//入力されたユーザー名がデータベースにすでに登録されていないかチェック
 function check_same_user($user_name)
 {
     // DB接続
@@ -40,6 +44,7 @@ function check_same_user($user_name)
     }
 }
 
+//入力されたユーザー名とパスワードがデータベースのユーザー情報と一致しているかチェック
 function check_login($user_name, $password)
 {
     $user_id = '';
