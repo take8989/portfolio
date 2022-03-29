@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>作業終了のお知らせ</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		var interval_id;
+		var sec = 60;
+		var start_flag = false; // スタート処理中はtrue
+
+		$(function () {
+			$('#close').click(win_close);
+			interval_id = setInterval(close_timer, 1000);
+			start_flag = true;
+		});
+
+		function win_close() {
+			start_flag = false;
+			clearInterval(interval_id);
+			window.close();
+		}
+
+		function close_timer() {
+			sec--;
+			if (sec === 0) {
+				win_close();
+			}
+		}
+	</script>
+</head>
+
+<style type="text/css">
+    body {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #message {
+        margin-top: 20px;
+        font-size: 32px;
+    }
+</style>
+
+<body>
+	<p id="message">作業終了です。<br>お疲れさまでした。</p>
+	<button id="close">閉じる</button>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>休憩タイマー</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="common.js"></script>
+    <!--script src="sub.js"></script>-->
+</head>
+
+<style type="text/css">
+    body {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #rf_time {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    #message {
+        margin-top: 20px;
+        font-size: 32px;
+    }
+</style>
+
+<body>
+    <p id="message">休憩しましょう</p>
+    <div id="refresh_time">
+        <h2>休憩時間</h2>
+        <p id="rf_time"></p>
+        <!--初期設定-->
+        <button id="rf_start">休憩開始</button>
+        <button id="rf_finish">休憩終了</button>
+    </div>
+</body>
+
+</html>

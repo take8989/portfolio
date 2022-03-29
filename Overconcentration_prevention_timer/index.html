@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+   <meta charset="UTF-8">
+   <title>過集中防止タイマー</title>
+   <link rel="stylesheet" href="stylesheet.css">
+   <script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="common.js"></script>
+</head>
+<body>
+   <header><h1>過集中防止タイマー</h1></header>
+   <main>
+      <div id="option">
+         <div id="working_set">
+            <h3>作業時間</h3>
+            <p method class="set_timer">
+               <input class="min" type="number" value="45" min="0" max="99" >分 <!--初期設定-->
+               <input class="sec" type="number" value="0" min="0" max="59" >秒
+            </p>
+         </div>
+   
+         <div id="refresh_set">
+            <h3>休憩時間</h3>
+            <form method="get" class="set_timer">
+               <input class="min" type="number" value="5" min="0" max="99" >分 <!--初期設定-->
+               <input class="sec" type="number" value="0" min="0" max="59" >秒
+            </form>
+         </div>
+   
+         <div id="finish_set">
+            <h3>終了時刻</h3>
+            <p class="set_timer">
+               <input class="hour" type="number" value="12" min="0" max="23" >時 <!--初期設定-->
+               <input class="min" type="number" value="0" min="0" max="59" >分
+            </p>
+         </div>
+      </div>
+   
+      <div id="timer">
+         <h3>残り時間</h3>   
+         <p id="time"></p> <!--初期設定-->
+         <div id="btn">
+            <button id="start">スタート</button>
+            <button id="stop">ストップ</button>
+            <button id="reset">リセット</button>
+            <!--<button id="test">テスト</button>-->
+         </div>
+      </div>
+   </main>
+   <div id="test"></div>
+   <footer></footer>
+
+</body>
+</html>
